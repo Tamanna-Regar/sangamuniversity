@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Weather Report</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Temperature (°C)</td>
+                <td>{{ weather.temperature }}</td>
+            </tr>
+
+            <tr>
+                <td>Wind Speed (m/s)</td>
+                <td>{{ weather.windspeed }}</td>
+            </tr>
+
+            <tr>
+                <td>Wind Direction (°)</td>
+                <td>{{ weather.winddirection }}</td>
+            </tr>
+
+            <tr>
+                <td>Weather Code</td>
+                <td>{{ weather.weathercode }}</td>
+            </tr>
+
+            <tr>
+                <td>Time</td>
+                <td>{{ weather.time }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
