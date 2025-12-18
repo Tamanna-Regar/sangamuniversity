@@ -9,24 +9,24 @@
 
         <!-- Favicons -->
         {% load static %}
-        <link href="{%static 'img/favicon.ico' %}" rel="icon">
-        <link href="{%static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+        <link href="{% static 'mg/favicon.ico' %}" rel="icon">
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Nunito:600,700,800,900" rel="stylesheet"> 
+        <link href=" https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Nunito:600,700,800,900" rel="stylesheet"> 
 
         <!-- Bootstrap CSS File -->
-        <link href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
         <!-- Libraries CSS Files -->
-        <link href="{%static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
-        <link href="{%static 'vendor/animate/animate.min.css' %}" rel="stylesheet">
-        <link href="{%static 'vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
-        <link href="{%static 'vendor/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
 
         <!-- Main Stylesheet File -->
-        <link href="{%static 'css/hover-style.css' %}" rel="stylesheet">
-        <link href="{%static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/hover-style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
     </head>
 
     <body>
@@ -53,22 +53,26 @@
             <div class="container">
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="service.html">Services</a></li>
-                        <li><a href="booking.html">Booking</a></li>
+                        <li class="menu-active"><a href="{% url 'Home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'service' %}">Services</a></li>
+                        <li><a href="{% url 'booking' %}">Booking</a></li>
                         <li class="menu-has-children"><a href="#">pages</a>
                             <ul>
-                                <li><a href="login.html">Login</a></li>
+                                <li><a href="{% url 'login' %}">Login">Login</a></li>
                                 <li class="menu-has-children"><a href="#">Drop Down</a>
                                     <ul>
-                                        <li><a href="#">Drop Down 1</a></li>
-                                        <li><a href="#">Drop Down 2</a></li>
+                                        <li><a href="{% url 'login' %}#">Drop Down 1</a></li>
+                                        <li><a href="{% url 'login' %}#">Drop Down 2</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>

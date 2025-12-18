@@ -1,4 +1,6 @@
+{% load static %}
 {% include "header.html" %}
+
 
 <main id="main">
 
@@ -12,7 +14,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="img/about.jpg" alt="About Image" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=1000&auto=format&fit=crop" alt="About Us" class="img-fluid">
+
                     </div>
                 </div>
 
@@ -83,37 +86,24 @@
     </section>
     <!-- Why Choose Us Section End -->
 
-
-    {% include "footer.html" %}
-
 </main>
-
-<!-- Footer Start -->
-<footer id="footer">
-    <div class="container">
-        <div class="copyright">
-            <p>&copy; Copyright <a href="#">Your Site Name</a>. All Rights Reserved</p>
-            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-        </div>
-    </div>
-</footer>
-<!-- Footer End -->
+{% include "footer.html" %}
 
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- JavaScript Libraries -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/jquery/jquery-migrate.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="vendor/easing/easing.min.js"></script>
-<script src="vendor/stickyjs/sticky.js"></script>
-<script src="vendor/superfish/hoverIntent.js"></script>
-<script src="vendor/superfish/superfish.min.js"></script>
-<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-<script src="vendor/touchSwipe/jquery.touchSwipe.min.js"></script>
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/jquery/jquery-migrate.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vendor/easing/easing.min.js' %}"></script>
+<script src="{% static 'vendor/stickyjs/sticky.js' %}"></script>
+<script src="{% static 'vendor/superfish/hoverIntent.js' %}"></script>
+<script src="{% static 'vendor/superfish/superfish.min.js' %}"></script>
+<script src="{% static 'vendor/owlcarousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'vendor/touchSwipe/jquery.touchSwipe.min.js' %}"></script>
 
 <!-- Main Javascript File -->
-<script src="js/main.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>
