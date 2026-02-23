@@ -1,0 +1,121 @@
+:root {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #1c1e21;
+    --li-bg: #f8f9fa;
+    --border: #ddd;
+    --accent: #007bff;
+}
+
+body.dark-theme {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f8fafc;
+    --li-bg: #334155;
+    --border: #475569;
+    --accent: #38bdf8;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    transition: all 0.3s ease;
+}
+
+.container {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#theme-toggle {
+    background: var(--li-bg);
+    color: var(--text-color);
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+input:focus { border-color: var(--accent); }
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#add-btn { background: var(--accent); color: white; padding: 0 20px; }
+#add-btn:hover { transform: scale(1.05); }
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#clear-all-btn { background: #dc3545; color: white; padding: 6px 12px; }
+
+ul { list-style: none; padding: 0; }
+
+li {
+    background: var(--li-bg);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid var(--accent);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.task-content { cursor: pointer; flex: 1; }
+.task-text { display: block; font-size: 1.05rem; margin-bottom: 4px; }
+.task-date { font-size: 0.75rem; color: #888; }
+
+.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.actions { display: flex; gap: 8px; }
+.actions button {
+    background: transparent;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.delete-btn:hover { color: #ef4444; }
