@@ -1,5 +1,38 @@
-<p>Name:{{Username}}</p>
-<p>Name:{{UserEmail}}</p>
-<p>Name:{{Usersubject}}</p>
-<p>Name:{{Usermessage}}</p>
+{% load static %}
+{% include "header.html" %}
 
+<main id="main">
+
+    <!-- Contact Details Section Start -->
+    <section id="contact-details">
+        <div class="container">
+            <div class="section-header">
+                <h3>Contact Form Submission</h3>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm p-4">
+                        <h4 class="mb-3">Submitted Details</h4>
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Name:</strong> {{ Username }}</li>
+                            <li class="list-group-item"><strong>Email:</strong> {{ UserEmail }}</li>
+                            <li class="list-group-item"><strong>Subject:</strong> {{ Usersubject }}</li>
+                            <li class="list-group-item"><strong>Message:</strong> {{ Usermessage }}</li>
+                        </ul>
+
+                        <div class="mt-3 text-center">
+                            <a href="{% url 'contact_page' %}" class="btn btn-primary">Back to Contact Form</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Contact Details Section End -->
+
+</main>
+
+{% include "footer.html" %}

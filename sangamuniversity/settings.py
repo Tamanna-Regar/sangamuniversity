@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'service',
     'blog',
     'aboutpage',
+    'rest_framework',
+    'clientInfo'
 
 ]
 

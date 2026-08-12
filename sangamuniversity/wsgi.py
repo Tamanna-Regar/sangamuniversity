@@ -1,16 +1,19 @@
-"""
-WSGI config for sangamuniversity project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
-"""
+# +++++++++++ DJANGO +++++++++++
+# To use your own django app use code like this:
 
 import os
+import sys
 
+# Assuming your django settings file is at:
+# '/home/Tamanna12/sangamuniversity/sangamuniversity/settings.py'
+# And your manage.py is at '/home/Tamanna12/sangamuniversity/manage.py'
+
+path = '/home/Tamanna12/sangamuniversity'
+if path not in sys.path:
+    sys.path.append(path)
+
+os.environ['DJANGO_SETTINGS_MODULE'] = 'sangamuniversity.settings'
+
+# Then:
 from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sangamuniversity.settings')
-
 application = get_wsgi_application()

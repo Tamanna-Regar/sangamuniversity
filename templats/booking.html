@@ -1,3 +1,4 @@
+{% load static %}
 {% include "header.html" %}
 
 
@@ -84,12 +85,12 @@
             <section id="support" class="wow fadeInUp">
                 <div class="container">
                     <h1>
-                        Need help? Call me 24/7 at +1-234-567-8900
+                        Need help? Call me 24/7 at +1-797-634-4322
                     </h1>
                 </div>
             </section>
             <!-- Support Section end -->
-           { % include "footer.html" %}
+{% include "footer.html" %}
 
 
         </main>
@@ -112,21 +113,21 @@
         <!-- <div id="preloader"></div> -->
 
         <!-- JavaScript Libraries -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/jquery/jquery-migrate.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="vendor/easing/easing.min.js"></script>
-        <script src="vendor/stickyjs/sticky.js"></script>
-        <script src="vendor/superfish/hoverIntent.js"></script>
-        <script src="vendor/superfish/superfish.min.js"></script>
-        <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
-        <script src="vendor/touchSwipe/jquery.touchSwipe.min.js"></script>
-        <script src="vendor/tempusdominus/js/moment.min.js"></script>
-        <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
-        <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/jquery/jquery-migrate.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'vendor/easing/easing.min.js' %}"></script>
+        <script src="{% static 'vendor/stickyjs/sticky.js' %}"></script>
+        <script src="{% static 'vendor/superfish/hoverIntent.js' %}"></script>
+        <script src="{% static 'vendor/superfish/superfish.min.js' %}"></script>
+        <script src="{% static 'vendor/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'vendor/touchSwipe/jquery.touchSwipe.min.js' %}"></script>
+        <script src="{% static 'vendor/tempusdominus/js/moment.min.js' %}"></script>
+        <script src="{% static 'vendor/tempusdominus/js/moment-timezone.min.js' %}"></script>
+        <script src="{% static 'vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
 
         <!-- Main Javascript File -->
-        <script src="js/main.js"></script>
+        <script src="{% static 'js/main.js' %}"></script>
 
     </body>
 </html>

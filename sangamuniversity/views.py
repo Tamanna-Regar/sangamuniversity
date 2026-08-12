@@ -25,6 +25,16 @@ def booking_page(request):
 
 def login_page(request):
    return render(request,"login.html")
+from django.shortcuts import render
+
+def Drop_Down_1_page(request):
+   return render(request,"dropdown1.html")
+def Drop_Down_2_page(request):
+   return render(request,"dropdown2.html")
+from django.shortcuts import render
+
+
+
 
 
 def contact_page(request):
@@ -63,7 +73,7 @@ def contact_page(request):
       admin_email = EmailMultiAlternatives(
       subject=admin_subject,
       body=admin_message,
-      from_email="v9d2412@gmail.com",
+      from_email="deadpool9039@gmail.com",
       to=["tamannaregar2@gmail.com"],
       )
       admin_email.send(fail_silently=False)
@@ -86,5 +96,8 @@ def weatherData(request):
          weather = {} # Handle the case where the API is notreachable
       # Pass the data to the template
       return render(request,'weather.html', {'weather':weather})
+from django.shortcuts import render
+
+
 
 

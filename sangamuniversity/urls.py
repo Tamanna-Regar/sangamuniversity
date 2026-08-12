@@ -16,24 +16,28 @@ Including another URLconf
 """
 
 from django.contrib import admin
+from django.urls import path, include
 from django.urls import path
 from sangamuniversity import views
 from django.conf import settings
 from django.conf.urls.static import static
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Home_Page),
-    path('about',views.about_page),
-    path('contact',views.contact_page),
-    path('service',views.service_page),
-    path('booking',views.booking_page),
-    path('login',views.login_page),
-    path('weather', views.weatherData),
+    path('',views.Home_Page,name='Home'),
+    path('Home/', views.Home_Page,name='Home'),
+    path('about/',views.about_page,name='about'), 
+    path('contact/',views.contact_page,name='contact'),
+    path('service/',views.service_page,name='service'),
+    path('booking/',views.booking_page,name='booking'),
+    path('login/',views.login_page,name='login'),
+    path('weather/', views.weatherData, name='weather'),
+    path('dropdown1/',views.Drop_Down_1_page,name='dropdown1'),
+    path('dropdown2/',views.Drop_Down_2_page,name='dropdown2'),
+    path("", include("clientInfo.urls")), 
 
 ]
-# if settings.DEBUG:
-#     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+   urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
 
